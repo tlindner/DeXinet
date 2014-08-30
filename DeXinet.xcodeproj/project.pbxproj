@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224F3D3B19B22D75007918CA /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 224F3D3A19B22D75007918CA /* libiconv.dylib */; };
 		22616E9E19B22A6E00B4B245 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22616E9D19B22A6E00B4B245 /* Cocoa.framework */; };
 		22616EA819B22A6E00B4B245 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22616EA619B22A6E00B4B245 /* InfoPlist.strings */; };
 		22616EAA19B22A6E00B4B245 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22616EA919B22A6E00B4B245 /* main.m */; };
 		22616EAE19B22A6E00B4B245 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 22616EAC19B22A6E00B4B245 /* Credits.rtf */; };
 		22616EB119B22A6E00B4B245 /* TLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22616EB019B22A6E00B4B245 /* TLAppDelegate.m */; };
 		22616EB419B22A6E00B4B245 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22616EB219B22A6E00B4B245 /* MainMenu.xib */; };
+		22616EBD19B22BF300B4B245 /* DoWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 22616EBB19B22BF300B4B245 /* DoWork.m */; };
+		22616EBE19B22BF300B4B245 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 22616EBC19B22BF300B4B245 /* README */; };
+		22616EC019B22C8E00B4B245 /* hfresource_clean.c in Sources */ = {isa = PBXBuildFile; fileRef = 22616EBF19B22C8E00B4B245 /* hfresource_clean.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		224F3D3A19B22D75007918CA /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		22616E9A19B22A6E00B4B245 /* DeXinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeXinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22616E9D19B22A6E00B4B245 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		22616EA019B22A6E00B4B245 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +34,10 @@
 		22616EAF19B22A6E00B4B245 /* TLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAppDelegate.h; sourceTree = "<group>"; };
 		22616EB019B22A6E00B4B245 /* TLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLAppDelegate.m; sourceTree = "<group>"; };
 		22616EB319B22A6E00B4B245 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		22616EBA19B22BF300B4B245 /* DoWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoWork.h; sourceTree = "<group>"; };
+		22616EBB19B22BF300B4B245 /* DoWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoWork.m; sourceTree = "<group>"; };
+		22616EBC19B22BF300B4B245 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		22616EBF19B22C8E00B4B245 /* hfresource_clean.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hfresource_clean.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224F3D3B19B22D75007918CA /* libiconv.dylib in Frameworks */,
 				22616E9E19B22A6E00B4B245 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +56,7 @@
 		22616E9119B22A6D00B4B245 = {
 			isa = PBXGroup;
 			children = (
+				224F3D3A19B22D75007918CA /* libiconv.dylib */,
 				22616EA319B22A6E00B4B245 /* DeXinet */,
 				22616E9C19B22A6E00B4B245 /* Frameworks */,
 				22616E9B19B22A6E00B4B245 /* Products */,
@@ -84,6 +95,10 @@
 			children = (
 				22616EAF19B22A6E00B4B245 /* TLAppDelegate.h */,
 				22616EB019B22A6E00B4B245 /* TLAppDelegate.m */,
+				22616EBA19B22BF300B4B245 /* DoWork.h */,
+				22616EBB19B22BF300B4B245 /* DoWork.m */,
+				22616EBF19B22C8E00B4B245 /* hfresource_clean.c */,
+				22616EBC19B22BF300B4B245 /* README */,
 				22616EB219B22A6E00B4B245 /* MainMenu.xib */,
 				22616EA419B22A6E00B4B245 /* Supporting Files */,
 			);
@@ -157,6 +172,7 @@
 				22616EA819B22A6E00B4B245 /* InfoPlist.strings in Resources */,
 				22616EAE19B22A6E00B4B245 /* Credits.rtf in Resources */,
 				22616EB419B22A6E00B4B245 /* MainMenu.xib in Resources */,
+				22616EBE19B22BF300B4B245 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +185,8 @@
 			files = (
 				22616EAA19B22A6E00B4B245 /* main.m in Sources */,
 				22616EB119B22A6E00B4B245 /* TLAppDelegate.m in Sources */,
+				22616EBD19B22BF300B4B245 /* DoWork.m in Sources */,
+				22616EC019B22C8E00B4B245 /* hfresource_clean.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +284,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DeXinet/DeXinet-Prefix.pch";
 				INFOPLIST_FILE = "DeXinet/DeXinet-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -278,7 +298,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DeXinet/DeXinet-Prefix.pch";
 				INFOPLIST_FILE = "DeXinet/DeXinet-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -302,6 +324,7 @@
 				22616EB919B22A6E00B4B245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

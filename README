@@ -1,0 +1,7 @@
+DeXinet
+
+Copyright 2013 by tim lindner. All rights reserved.
+
+Xinet is an Apple Filing Protocol server for various UNIX machines.
+
+DeXinet will restore resource forks and finder information from HSResource and HSancillary files.
