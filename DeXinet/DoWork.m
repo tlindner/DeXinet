@@ -6,6 +6,7 @@
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "TLAppDelegate.h"
 #import "DoWork.h"
 
 #include <sys/types.h>
@@ -108,8 +109,8 @@ int DeXinet( const char *path );
 			fts_close(fts);
 			
 			logString( [NSString stringWithFormat:@"Found %u children.\n", file_count]);
-			[[NSApp delegate] performSelectorOnMainThread:@selector(setMaxProgress:) withObject:[NSNumber numberWithUnsignedInt:file_count] waitUntilDone:YES];
-			[[NSApp delegate] performSelectorOnMainThread:@selector(progressStart:) withObject:nil waitUntilDone:YES];
+			[(TLAppDelegate *)[NSApp delegate] performSelectorOnMainThread:@selector(setMaxProgress:) withObject:[NSNumber numberWithUnsignedInt:file_count] waitUntilDone:YES];
+			[(TLAppDelegate *)[NSApp delegate] performSelectorOnMainThread:@selector(progressStart:) withObject:nil waitUntilDone:YES];
 			
 			logString( @"Working...\n" );
 			
@@ -153,7 +154,7 @@ int DeXinet( const char *path );
                     else
                     {
                         DeXinet( fts_entry->fts_path );
-						[[NSApp delegate] performSelectorOnMainThread:@selector(incrementProgress:) withObject:nil waitUntilDone:NO];
+						[(TLAppDelegate *)[NSApp delegate] performSelectorOnMainThread:@selector(incrementProgress:) withObject:nil waitUntilDone:NO];
                     }
                 }
                 
@@ -203,7 +204,7 @@ int DeXinet( const char *path );
 		}
         
         logString( @"\nDone.\n\n" );
-		[[NSApp delegate] performSelectorOnMainThread:@selector(progressDone:) withObject:nil waitUntilDone:YES];
+		[(TLAppDelegate *)[NSApp delegate] performSelectorOnMainThread:@selector(progressDone:) withObject:nil waitUntilDone:YES];
 		
 		[self completeOperation];		
 		[pool release];
@@ -254,7 +255,7 @@ int rmrf(char *path)
 
 void logString( NSString *log )
 {
-	[[NSApp delegate] performSelectorOnMainThread:@selector(logString:) withObject:log waitUntilDone:NO];
+	[(TLAppDelegate *)[NSApp delegate] performSelectorOnMainThread:@selector(logString:) withObject:log waitUntilDone:NO];
 }
 
 void logwindowf( char *formatString, ... )
